@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+<!--
+  Edit Flashcard Page
+  - This page displays a form pre-filled with the current flashcard's details.
+  - When submitted, the form sends a POST request with '_method=PUT' so Express treats it as an update.
+-->
+
+<h2 class="mb-4">Edit Flashcard</h2>
+
+<form 
+  action="/flashcards/<%= flashcard._id %>?_method=PUT" 
+  method="POST"
+  class="mx-auto" 
+  style="max-width: 600px;"
+>
+  <!-- Question input, showing the current value for easy edits -->
+  <div class="mb-3">
+    <label for="question" class="form-label">Question</label>
+    <input
+      type="text"
+      class="form-control"
+      id="question"
+      name="question"
+      value="<%= flashcard.question %>"
+      required
+    >
+  </div>
+
+  <!-- Answer field, textarea pre-filled with the current answer -->
+  <div class="mb-3">
+    <label for="answer" class="form-label">Answer</label>
+    <textarea
+      class="form-control"
+      id="answer"
+      name="answer"
+      rows="3"
+      required
+    ><%= flashcard.answer %></textarea>
+  </div>
+
+  <!-- Subject or category input, again pre-filled -->
+  <div class="mb-3">
+    <label for="subject" class="form-label">Subject/Category</label>
+    <input
+      type="text"
+      class="form-control"
+      id="subject"
+      name="subject"
+      value="<%= flashcard.subject %>"
+      required
+    >
+  </div>
+
+  <!-- Submission button to save changes -->
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<!-- Page Title -->
+<h2 class="mb-4">Your Flashcards</h2>
+
+<!-- Cards Grid: Adapts to screen size with Bootstrap -->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <% if (flashcards.length === 0) { %>
+    <!-- Message for when there are no flashcards -->
+    <p class="text-muted">No flashcards found. Create one!</p>
+  <% } else { %>
+    <% flashcards.forEach(card => { %>
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <!-- Flashcard Question -->
+            <h5 class="card-title"><%= card.question %></h5>
+            <!-- Flashcard Answer -->
+            <p class="card-text">Answer: <%= card.answer %></p>
+            <!-- Flashcard Subject/Category -->
+            <p class="badge bg-primary"><%= card.subject %></p>
+          </div>
+          <div class="card-footer text-end">
+            <!-- Edit button (links to edit form for this card) -->
+            <a href="/flashcards/<%= card._id %>/edit" class="btn btn-sm btn-outline-secondary me-2">Edit</a>
+            <!-- Delete button placeholder. To make this work add a delete form. -->
+            <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+  <% } %>
+
+</div>
+
+<%- include('partials/footer') %>

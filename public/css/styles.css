@@ -1,0 +1,168 @@
+/* 2025 Modern Web Style — Clean, Bold, Authentic */
+
+/* Layout and Base */
+body {
+  background: linear-gradient(120deg, #e3ecfa, #f9fafc 90%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #23272f;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Navbar brand style */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #0053ba !important;
+}
+
+/* Navbar dark overrides for more modern look */
+.navbar-dark.bg-dark {
+  background: #141c27 !important;
+  border-bottom: 1px solid #e9ecef22;
+}
+
+/* Primary Button, modern and animated */
+.btn-primary {
+  background: linear-gradient(90deg, #1678f2 60%, #0260b8);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 12px #1678f222;
+  transition: background .2s, box-shadow .3s;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(90deg, #0160be, #1939a1 80%);
+  box-shadow: 0 8px 22px #0160be44;
+}
+
+.btn-outline-secondary {
+  border-radius: 0.5rem;
+  border-width: 2px;
+  font-weight: 500;
+  color: #32506d;
+  border-color: #cdd7e2;
+  background: rgba(255,255,255,0.8);
+  transition: background .2s, border-color .2s;
+}
+.btn-outline-secondary:hover, .btn-outline-secondary:focus {
+  background: #155db3;
+  color: #fff;
+  border-color: #1678f2;
+}
+
+/* Card/hero styles: "glass" effect, subtle shadow */
+.p-5.bg-light.rounded-3.shadow-sm,
+.card.h-100.shadow-sm {
+  background: rgba(255,255,255,0.94);
+  border-radius: 1.25rem;
+  padding: 2.8rem 2rem;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.10), 0 1.5px 0 #e0ecfe inset;
+  border: 1.5px solid #f2f5fa;
+  backdrop-filter: blur(3px);
+  transition: box-shadow 0.3s, transform 0.15s;
+}
+.p-5.bg-light.rounded-3.shadow-sm:hover,
+.card.h-100.shadow-sm:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.17);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Card Footer button area: lighter for separation */
+.card-footer {
+  background: none;
+  border: none;
+}
+
+/* Headings & Titles for a bolder/brutalist touch */
+h1.display-5, .display-5 {
+  color: #1a3861;
+  font-weight: 800;
+  font-size: 2.6rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px #dceaf754;
+}
+
+h2, h3, .card-title {
+  color: #1656a0;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraph text */
+.lead, p {
+  font-size: 1.16rem;
+  color: #465568;
+  line-height: 1.7;
+}
+
+/* Form improvement */
+.form-control, textarea.form-control {
+  background: #f7fafd;
+  border-radius: 0.75rem;
+  border: 1.5px solid #dbebfa;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  border-color: #1678f2;
+  box-shadow: 0 0 0 2px #1678f228;
+}
+
+/* Flashcard badges, smoother and bolder */
+.badge.bg-primary {
+  font-size: 0.98rem;
+  letter-spacing: 0.12em;
+  background: linear-gradient(90deg, #157ee3, #0160be 80%);
+  border-radius: 0.55em;
+  padding: 0.45em 0.92em;
+  box-shadow: 0 1px 3px #1678f233;
+}
+
+/* Links and large call-to-action buttons */
+a.btn-lg {
+  font-size: 1.18rem;
+  padding: 0.85rem 1.7rem;
+  border-radius: 0.65rem;
+  font-weight: 600;
+}
+
+/* Footer area: center and soften */
+footer {
+  text-align: center;
+  color: #97a8bc;
+  padding: 2rem 0 1.4rem 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive tweaks for mobile friendliness */
+@media (max-width: 768px) {
+  h1.display-5 {
+    font-size: 2.2rem;
+  }
+  .p-5.bg-light.rounded-3.shadow-sm,
+  .card.h-100.shadow-sm {
+    padding: 1.3rem 0.6rem;
+  }
+  .row-cols-md-3 > .col {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra: Animate link and button click (subtle micro-interaction) */
+a.btn, button.btn {
+  transition: transform 0.09s cubic-bezier(0.2,0.7,0.4,1), box-shadow 0.09s;
+}
+a.btn:active, button.btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px #0260b855;
+}
+
+/* Section spacing for breathing room */
+main.container {
+  padding-bottom: 3.5rem;
+  padding-top: 2.2rem;
+}

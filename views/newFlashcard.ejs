@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+<!-- Page Title -->
+<h2 class="mb-4">Create a New Flashcard</h2>
+
+<!-- Flashcard creation form -->
+<form action="/flashcards" method="POST" class="mx-auto" style="max-width: 600px;">
+
+  <!-- Question input field -->
+  <div class="mb-3">
+    <label for="question" class="form-label">
+      Question
+      <!-- Ask the user to enter the question for their flashcard -->
+    </label>
+    <input
+      type="text"
+      class="form-control"
+      id="question"
+      name="question"
+      placeholder="Enter the question"
+      required
+    >
+  </div>
+
+  <!-- Answer input field -->
+  <div class="mb-3">
+    <label for="answer" class="form-label">
+      Answer
+      <!-- User provides the answer to their flashcard question here -->
+    </label>
+    <textarea
+      class="form-control"
+      id="answer"
+      name="answer"
+      rows="3"
+      placeholder="Enter the answer"
+      required
+    ></textarea>
+  </div>
+
+  <!-- Subject or category input -->
+  <div class="mb-3">
+    <label for="subject" class="form-label">
+      Subject/Category
+      <!-- Example options help the user -->
+    </label>
+    <input
+      type="text"
+      class="form-control"
+      id="subject"
+      name="subject"
+      placeholder="e.g. Math, History"
+      required
+    >
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary">
+    Create Flashcard
+  </button>
+
+</form>
+
+<%- include('partials/footer') %>
