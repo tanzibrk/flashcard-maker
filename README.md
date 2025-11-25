@@ -29,7 +29,9 @@ Start the server:
 
 text
 npm start
-Visit http://localhost:3000
+Visit https://flashcard-maker-wa0u.onrender.com/
+
+Deployment done on Render.
 
 MongoDB Compass
 Open Compass, paste your Atlas connection string, and connect to view your flashcardsdb database.
